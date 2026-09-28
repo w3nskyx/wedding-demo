@@ -22,7 +22,7 @@
 <label>Есть ли фотографии пары для приглашения?<select name="Фотографии"><option value="">Выберите</option><option>Да, уже есть</option><option>Будут позже</option><option>Пока не решили</option></select></label>
 </section>
 
-<section><span class="num">02</span><h2>Настроение</h2><p class="hint">Это не шаблоны приглашения. Выберите всё, что вам откликается — или свой вариант.</p>
+<section><span class="num">02</span><h2>Настроение</h2><p class="hint"><strong>Это примеры направлений, а не готовые шаблоны.</strong> Можно выбрать несколько близких вариантов. Мы используем их как ориентиры и создадим индивидуальный дизайн.</p>
 <div class="moods">
 <label class="mood airy"><input type="checkbox" name="Настроение" value="Нежное / воздушное"><b>01</b><span>Нежное<br>/ воздушное</span></label>
 <label class="mood classic"><input type="checkbox" name="Настроение" value="Элегантное / классическое"><b>02</b><span>Элегантное<br>/ классическое</span></label>
@@ -31,11 +31,23 @@
 <label class="mood dark"><input type="checkbox" name="Настроение" value="Тёмное / атмосферное"><b>05</b><span>Тёмное<br>/ атмосферное</span></label>
 <label class="mood bold"><input type="checkbox" name="Настроение" value="Яркое / необычное"><b>06</b><span>Яркое<br>/ необычное</span></label>
 </div>
+<div class="subhead">Что ещё вам близко?</div>
+<p class="hint">Можно отметить детали, которые хотелось бы почувствовать в оформлении.</p>
+<div class="chips">
+<label><input type="checkbox" name="Визуальные мотивы" value="Живая флористика"><span>Живая флористика</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Ботаника / зелень"><span>Ботаника / зелень</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Акварель / иллюстрации"><span>Акварель / иллюстрации</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Текстуры бумаги"><span>Текстуры бумаги</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Тонкая графика / линии"><span>Тонкая графика / линии</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Фото как главный акцент"><span>Фото как главный акцент</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Геометрия"><span>Геометрия</span></label>
+<label><input type="checkbox" name="Визуальные мотивы" value="Без декора / чисто"><span>Без декора / чисто</span></label>
+</div>
 <label>Что именно вам понравилось?<textarea name="Что понравилось в настроении" placeholder="Цвет, свет, лёгкость, строгость, общее ощущение…"></textarea></label>
 <label>Свой вариант / ничего из этого<textarea name="Своё настроение" placeholder="Опишите как чувствуете"></textarea></label>
 </section>
 
-<section><span class="num">03</span><h2>Цвет</h2><p class="hint">Не ищем точный оттенок — только направление.</p>
+<section><span class="num">03</span><h2>Какие оттенки вам нравятся?</h2><p class="hint"><strong>Это не выбор точного цвета будущего приглашения.</strong> Отметьте палитры, атмосфера которых вам близка. Мы используем их как ориентир при создании индивидуального дизайна.</p>
 <div class="palette">
 <label><input type="checkbox" name="Цвет" value="Молочный / бежевый / шампань"><i class="p p1"></i><span>Молочный<br>шампань</span></label>
 <label><input type="checkbox" name="Цвет" value="Пыльная роза"><i class="p p2"></i><span>Пыльная<br>роза</span></label>
@@ -50,7 +62,7 @@
 <label class="checkline"><input type="checkbox" name="Цвет доверить студии" value="Да"> Не знаю — предложите сами</label>
 </section>
 
-<section><span class="num">04</span><h2>Характер оформления</h2><p class="hint">Вы выбираете не конкретный шрифт, а ощущение.</p>
+<section><span class="num">04</span><h2>Характер текста</h2><p class="hint"><strong>Здесь тоже нет выбора конкретного шрифта.</strong> Отметьте характер оформления текста, который вам ближе. Конкретное сочетание подберём мы.</p>
 <div class="typegrid">
 <label class="t1"><input type="checkbox" name="Типографика" value="Классический / журнальный"><b>Анна & Михаил</b><small>Классический / журнальный</small></label>
 <label class="t2"><input type="checkbox" name="Типографика" value="Романтичный"><b>Анна & Михаил</b><small>Романтичный</small></label>
@@ -58,16 +70,18 @@
 <label class="t4"><input type="checkbox" name="Типографика" value="Современный минималистичный"><b>АННА & МИХАИЛ</b><small>Современный минималистичный</small></label>
 <label class="t5"><input type="checkbox" name="Типографика" value="Выразительный editorial"><b>Анна<br>& Михаил</b><small>Выразительный editorial</small></label>
 <label class="t6"><input type="checkbox" name="Типографика" value="Контрастный современный"><b>Анна × Михаил</b><small>Контрастный современный</small></label>
-</div></section>
+<label class="typegrid extra-type"><input type="checkbox" name="Типографика" value="Строгий текст + рукописный акцент"><b>Анна <em>&</em> Михаил</b><small>Строгий текст + рукописный акцент</small></label>
+<label class="typegrid extra-type soft"><input type="checkbox" name="Типографика" value="Мягкий современный"><b>Анна & Михаил</b><small>Мягкий современный</small></label>
+</section>
 
 <section><span class="num">05</span><h2>Что должно быть в приглашении?</h2><p class="hint">Выберите нужное. Порядок и композицию мы продумаем сами.</p>
 <div class="chips">
-<label><input type="checkbox" name="Блоки приглашения" value="Обращение к гостям"><span>Обращение к гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Блоки приглашения" value="История пары"><span>История пары</span></label><label><input type="checkbox" name="Блоки приглашения" value="Таймер до свадьбы"><span>Таймер до свадьбы</span></label><label><input type="checkbox" name="Блоки приглашения" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Блоки приглашения" value="Место и карта"><span>Место и карта</span></label><label><input type="checkbox" name="Блоки приглашения" value="Дресс-код"><span>Дресс-код</span></label><label><input type="checkbox" name="Блоки приглашения" value="Пожелания гостям"><span>Пожелания гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Информация о подарках"><span>Информация о подарках</span></label><label><input type="checkbox" name="Блоки приглашения" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Блоки приглашения" value="RSVP — анкета гостей"><span>RSVP — анкета гостей</span></label><label><input type="checkbox" name="Блоки приглашения" value="Индивидуальный раздел"><span>Индивидуальный раздел</span></label>
+<label><input type="checkbox" name="Блоки приглашения" value="Обращение к гостям"><span>Обращение к гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Блоки приглашения" value="История пары"><span>История пары</span></label><label><input type="checkbox" name="Блоки приглашения" value="Таймер до свадьбы"><span>Таймер до свадьбы</span></label><label><input type="checkbox" name="Блоки приглашения" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Блоки приглашения" value="Место и карта"><span>Место и карта</span></label><label><input type="checkbox" name="Блоки приглашения" value="Дресс-код"><span>Дресс-код</span></label><label><input type="checkbox" name="Блоки приглашения" value="Пожелания гостям"><span>Пожелания гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Информация о подарках"><span>Информация о подарках</span></label><label><input type="checkbox" name="Блоки приглашения" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Блоки приглашения" value="Анкета для гостей"><span>Анкета для гостей</span></label><label><input type="checkbox" name="Блоки приглашения" value="Индивидуальный раздел"><span>Индивидуальный раздел</span></label>
 </div>
 <label>Что-то ещё?<textarea name="Дополнительные блоки" placeholder="Любая идея, которую хочется увидеть"></textarea></label>
 </section>
 
-<section><span class="num">06</span><h2>Анкета для гостей</h2><p class="hint">Если нужен RSVP, отметьте, что хотите узнать у гостей.</p>
+<section><span class="num">06</span><h2>Анкета для гостей</h2><p class="hint">Если хотите собирать ответы гостей прямо в приглашении, отметьте, что вам важно у них узнать.</p>
 <div class="chips">
 <label><input type="checkbox" name="Вопросы RSVP" value="Имя"><span>Имя</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Смогут ли присутствовать"><span>Смогут ли присутствовать</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Количество гостей"><span>Количество гостей</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Выбор блюда"><span>Выбор блюда</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Напитки"><span>Напитки</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Комментарий / пожелание"><span>Комментарий / пожелание</span></label>
 </div>
@@ -76,9 +90,9 @@
 <label>Есть ли ещё что-нибудь, что вы хотели бы узнать у гостей?<textarea name="Дополнительные вопросы RSVP"></textarea></label>
 </section>
 
-<section><span class="num">07</span><h2>Материалы</h2><p class="hint">Необязательно иметь всё сейчас — недостающее можно прислать позже.</p>
+<section id="materials"><span class="num">07</span><h2>Что у вас уже готово?</h2><p class="hint">Не страшно, если сейчас есть не всё. Отметьте, какие материалы для приглашения уже готовы. Остальное можно будет прислать позже.</p>
 <div class="chips">
-<label><input type="checkbox" name="Уже есть материалы" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Уже есть материалы" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Уже есть материалы" value="Готовые тексты"><span>Готовые тексты</span></label><label><input type="checkbox" name="Уже есть материалы" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Уже есть материалы" value="Адрес / геолокация"><span>Адрес / геолокация</span></label><label><input type="checkbox" name="Уже есть материалы" value="Палитра свадьбы"><span>Палитра свадьбы</span></label><label><input type="checkbox" name="Уже есть материалы" value="Референсы"><span>Референсы</span></label>
+<label><input type="checkbox" name="Уже есть материалы" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Уже есть материалы" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Уже есть материалы" value="Тексты или история пары"><span>Тексты / история пары</span></label><label><input type="checkbox" name="Уже есть материалы" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Уже есть материалы" value="Адрес / геолокация"><span>Адрес / геолокация</span></label><label><input type="checkbox" name="Уже есть материалы" value="Палитра свадьбы"><span>Палитра свадьбы</span></label><label><input type="checkbox" name="Уже есть материалы" value="Информация о дресс-коде"><span>Информация о дресс-коде</span></label><label><input type="checkbox" name="Уже есть материалы" value="Референсы"><span>Референсы</span></label><label><input type="checkbox" name="Уже есть материалы" value="Другое"><span>Другое</span></label>
 </div></section>
 
 <section><span class="num">08</span><h2>А теперь — про вас</h2><p class="hint">Именно здесь часто рождается идея уникального приглашения.</p>
