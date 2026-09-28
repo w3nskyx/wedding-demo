@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#efe8df">
+  <title>Муся & Матусевич — 16 декабря</title>
+  <meta name="description" content="Персональное свадебное приглашение">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <button class="music-button" id="musicButton" aria-label="Музыка">
+    <span class="music-icon">♪</span><span id="musicLabel">Музыка</span>
+  </button>
+
+  <audio id="bgMusic" loop preload="metadata">
+    <source src="assets/audio/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-photo photo photo-hero" role="img" aria-label="Фото пары"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow">НАШ ДЕНЬ</div>
+        <h1><span>Муся</span><em>&</em><span>Матусевич</span></h1>
+        <div class="hero-date">16 · 12</div>
+        <p>Есть дни, которые хочется сохранить не только в памяти.</p>
+        <a class="scroll-cue" href="#story">листай вниз ↓</a>
+      </div>
+    </section>
+
+    <section class="paper section intro" id="story">
+      <div class="content narrow reveal">
+        <div class="eyebrow dark">НАША ИСТОРИЯ</div>
+        <h2>Всё началось<br><i>совершенно обычно</i></h2>
+        <p class="lead">
+          Когда-то это была просто работа и обычный день. А потом мы встретились —
+          и постепенно всё стало совсем не обычным.
+        </p>
+      </div>
+      <div class="story-grid">
+        <article class="story-card reveal">
+          <div class="photo photo-kaliningrad"></div>
+          <div class="story-copy">
+            <span>01</span>
+            <h3>Калининград</h3>
+            <p>Первое большое путешествие вместе. Один из тех моментов, после которых уже понимаешь: это история надолго.</p>
+          </div>
+        </article>
+        <article class="story-card reverse reveal">
+          <div class="photo photo-proposal"></div>
+          <div class="story-copy">
+            <span>02</span>
+            <h3>Предложение</h3>
+            <p>В какой-то момент стало ясно, что хочется не просто ещё одного путешествия. Хочется всей жизни вместе.</p>
+          </div>
+        </article>
+        <article class="story-card reveal">
+          <div class="photo photo-wedding"></div>
+          <div class="story-copy">
+            <span>03</span>
+            <h3>16 декабря</h3>
+            <p>День, когда мы стали мужем и женой. И, кажется, только тогда началось самое интересное.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-section section">
+      <div class="content reveal">
+        <div class="eyebrow">ДЕНЬ, КОТОРЫЙ МЫ ВЫБРАЛИ</div>
+        <h2 class="big-date">16<br><span>декабря</span></h2>
+        <div class="countdown" id="countdown">
+          <div><strong id="days">—</strong><span>дней</span></div>
+          <div><strong id="hours">—</strong><span>часов</span></div>
+          <div><strong id="minutes">—</strong><span>минут</span></div>
+        </div>
+        <p class="tiny-note">В демонстрации таймер считает до ближайшего 16 декабря.</p>
+      </div>
+    </section>
+
+    <section class="paper section schedule">
+      <div class="content narrow reveal">
+        <div class="eyebrow dark">ПРОГРАММА</div>
+        <h2>Один день.<br><i>Много воспоминаний.</i></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><time>15:00</time><div><h3>Сбор гостей</h3><p>Обнимаемся, знакомимся и начинаем этот день вместе.</p></div></div>
+        <div class="timeline-item reveal"><time>16:00</time><div><h3>Церемония</h3><p>Главные слова, ради которых всё и затевалось.</p></div></div>
+        <div class="timeline-item reveal"><time>17:00</time><div><h3>Ужин</h3><p>Еда, музыка, тосты и те самые истории, которые потом вспоминают годами.</p></div></div>
+        <div class="timeline-item reveal"><time>22:30</time><div><h3>Финал вечера</h3><p>Не прощаемся — просто переносим продолжение на следующий повод.</p></div></div>
+      </div>
+    </section>
+
+    <section class="photo-break section">
+      <div class="photo photo-belarus"></div>
+      <div class="quote reveal">
+        <p>«Ещё одно место.<br>Ещё одна фотография.<br>Ещё одно воспоминание — теперь навсегда наше.»</p>
+      </div>
+    </section>
+
+    <section class="paper section rsvp" id="rsvp">
+      <div class="content narrow reveal">
+        <div class="eyebrow dark">RSVP</div>
+        <h2>Будете<br><i>с нами?</i></h2>
+        <p class="lead">Заполните короткую анкету. В настоящем заказе ответы сразу попадут молодожёнам.</p>
+      </div>
+
+      <form id="rsvpForm" class="rsvp-form reveal">
+        <label>
+          <span>Ваше имя</span>
+          <input type="text" name="name" required placeholder="Например, Сергей и Анна">
+        </label>
+
+        <fieldset>
+          <legend>Сможете прийти?</legend>
+          <div class="chips">
+            <label><input type="radio" name="attendance" value="Да, буду" required><span>Да, буду</span></label>
+            <label><input type="radio" name="attendance" value="К сожалению, нет"><span>К сожалению, нет</span></label>
+          </div>
+        </fieldset>
+
+        <label>
+          <span>Сколько вас будет?</span>
+          <select name="guests">
+            <option value="1">1 человек</option>
+            <option value="2">2 человека</option>
+            <option value="3">3 человека</option>
+            <option value="4">4 человека</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>Предпочтения по меню</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="food" value="Мясо"><span>Мясо</span></label>
+            <label><input type="checkbox" name="food" value="Рыба"><span>Рыба</span></label>
+            <label><input type="checkbox" name="food" value="Вегетарианское"><span>Без мяса</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Напитки</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="drinks" value="Вино"><span>Вино</span></label>
+            <label><input type="checkbox" name="drinks" value="Игристое"><span>Игристое</span></label>
+            <label><input type="checkbox" name="drinks" value="Крепкое"><span>Крепкое</span></label>
+            <label><input type="checkbox" name="drinks" value="Без алкоголя"><span>Без алкоголя</span></label>
+          </div>
+        </fieldset>
+
+        <label>
+          <span>Комментарий</span>
+          <textarea name="comment" rows="4" placeholder="Аллергии, трансфер, пожелания…"></textarea>
+        </label>
+
+        <button type="submit" class="submit-button">Отправить ответ</button>
+        <p class="form-note" id="formNote">Демо: ответы сохраняются в этом браузере и видны в admin.html.</p>
+      </form>
+    </section>
+
+    <footer>
+      <div class="monogram">М × М</div>
+      <p>Сделано как пример персонального интерактивного приглашения</p>
+      <a href="admin.html">Демо-панель ответов</a>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ответы гостей — демо</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2eee8;color:#222;margin:0;padding:30px}
+.wrap{max-width:1000px;margin:auto}
+h1{font-family:Georgia,serif;font-weight:400;font-size:48px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:25px 0}
+.card{background:#fff;padding:18px;border-radius:14px}.card b{font-size:28px;display:block}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}
+th,td{text-align:left;padding:12px;border-bottom:1px solid #eee;font-size:14px;vertical-align:top}
+button,a{display:inline-block;border:0;background:#222;color:#fff;padding:10px 14px;border-radius:999px;text-decoration:none;cursor:pointer;margin-right:8px}
+.actions{margin:20px 0}.empty{background:#fff;padding:30px;border-radius:14px}
+@media(max-width:720px){body{padding:16px}.table-wrap{overflow:auto}h1{font-size:38px}}
+</style>
+</head>
+<body><div class="wrap">
+<a href="index.html">← Приглашение</a>
+<h1>Ответы гостей</h1>
+<div class="stats">
+  <div class="card"><b id="total">0</b>ответов</div>
+  <div class="card"><b id="yes">0</b>придут</div>
+  <div class="card"><b id="people">0</b>гостей всего</div>
+</div>
+<div class="actions"><button id="export">Скачать CSV</button><button id="clear">Очистить демо</button></div>
+<div class="table-wrap"><table id="table">
+<thead><tr><th>Имя</th><th>Ответ</th><th>Кол-во</th><th>Еда</th><th>Напитки</th><th>Комментарий</th><th>Время</th></tr></thead>
+<tbody></tbody></table></div>
+<p class="empty" id="empty">Пока ответов нет. Заполни форму на главной странице — запись появится здесь.</p>
+</div>
+<script src="config.js"></script>
+<script>
+const key=(window.WEDDING_CONFIG||{}).storageKey||"wedding_rsvp";
+const list=JSON.parse(localStorage.getItem(key)||"[]");
+document.getElementById("total").textContent=list.length;
+document.getElementById("yes").textContent=list.filter(x=>x.attendance==="Да, буду").length;
+document.getElementById("people").textContent=list.filter(x=>x.attendance==="Да, буду").reduce((s,x)=>s+(Number(x.guests)||0),0);
+const tbody=document.querySelector("tbody");
+document.getElementById("empty").style.display=list.length?"none":"block";
+document.getElementById("table").style.display=list.length?"table":"none";
+for(const x of [...list].reverse()){
+ const tr=document.createElement("tr");
+ const vals=[x.name,x.attendance,x.guests,(x.food||[]).join(", "),(x.drinks||[]).join(", "),x.comment,new Date(x.createdAt).toLocaleString("ru-RU")];
+ for(const v of vals){const td=document.createElement("td");td.textContent=v||"—";tr.appendChild(td)}
+ tbody.appendChild(tr);
+}
+document.getElementById("clear").onclick=()=>{if(confirm("Очистить демо-ответы?")){localStorage.removeItem(key);location.reload()}};
+document.getElementById("export").onclick=()=>{
+ const rows=[["Имя","Ответ","Гостей","Еда","Напитки","Комментарий","Время"],...list.map(x=>[x.name,x.attendance,x.guests,(x.food||[]).join("; "),(x.drinks||[]).join("; "),x.comment,x.createdAt])];
+ const csv=rows.map(r=>r.map(v=>`"${String(v??"").replaceAll('"','""')}"`).join(",")).join("\n");
+ const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="rsvp.csv";a.click();URL.revokeObjectURL(a.href);
+};
+</script></body></html>
