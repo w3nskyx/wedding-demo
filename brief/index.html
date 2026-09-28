@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Двое — бриф</title><meta name="description" content="Небольшой бриф для создания персонального свадебного приглашения">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero"><div class="mark">ДВОЕ</div><p class="eyebrow">ПЕРСОНАЛЬНЫЕ СВАДЕБНЫЕ ПРИГЛАШЕНИЯ</p><h1>Расскажите<br>о вашей свадьбе</h1><p class="lead">Здесь нет правильных ответов. Нам важно почувствовать вас, вашу историю и настроение будущего дня.</p><a class="start" href="#brief">Начать бриф ↓</a></header>
+<main id="brief">
+<form id="briefForm" action="https://formsubmit.co/kolenka432@icloud.com" method="POST">
+<input type="hidden" name="_subject" value="Новый бриф клиента — студия Двое">
+<input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://w3nskyx.github.io/wedding-demo/brief/?sent=1">
+
+<section><span class="num">01</span><h2>Познакомимся</h2><p class="hint">Для начала — самое главное.</p>
+<label>Как вас зовут?<input name="Имена пары" required placeholder="Например, Анна и Михаил"></label>
+<div class="two"><label>Дата свадьбы<input type="date" name="Дата свадьбы"></label><label>Город<input name="Город" required placeholder="Санкт-Петербург"></label></div>
+<label>Место проведения, если уже выбрали<input name="Место проведения" placeholder="Название или адрес"></label>
+<label>Примерное количество гостей<input type="number" min="1" name="Количество гостей" inputmode="numeric" placeholder="Например, 45"></label>
+<label>Есть ли уже тема, стиль или общая идея свадьбы?<textarea name="Стиль свадьбы" placeholder="Если пока нет — так и напишите"></textarea></label>
+<label>Есть ли фотографии пары для приглашения?<select name="Фотографии"><option value="">Выберите</option><option>Да, уже есть</option><option>Будут позже</option><option>Пока не решили</option></select></label>
+</section>
+
+<section><span class="num">02</span><h2>Настроение</h2><p class="hint">Это не шаблоны приглашения. Выберите всё, что вам откликается — или свой вариант.</p>
+<div class="moods">
+<label class="mood airy"><input type="checkbox" name="Настроение" value="Нежное / воздушное"><b>01</b><span>Нежное<br>/ воздушное</span></label>
+<label class="mood classic"><input type="checkbox" name="Настроение" value="Элегантное / классическое"><b>02</b><span>Элегантное<br>/ классическое</span></label>
+<label class="mood minimal"><input type="checkbox" name="Настроение" value="Современное / минималистичное"><b>03</b><span>Современное<br>/ минималистичное</span></label>
+<label class="mood natural"><input type="checkbox" name="Настроение" value="Природное / тёплое"><b>04</b><span>Природное<br>/ тёплое</span></label>
+<label class="mood dark"><input type="checkbox" name="Настроение" value="Тёмное / атмосферное"><b>05</b><span>Тёмное<br>/ атмосферное</span></label>
+<label class="mood bold"><input type="checkbox" name="Настроение" value="Яркое / необычное"><b>06</b><span>Яркое<br>/ необычное</span></label>
+</div>
+<label>Что именно вам понравилось?<textarea name="Что понравилось в настроении" placeholder="Цвет, свет, лёгкость, строгость, общее ощущение…"></textarea></label>
+<label>Свой вариант / ничего из этого<textarea name="Своё настроение" placeholder="Опишите как чувствуете"></textarea></label>
+</section>
+
+<section><span class="num">03</span><h2>Цвет</h2><p class="hint">Не ищем точный оттенок — только направление.</p>
+<div class="palette">
+<label><input type="checkbox" name="Цвет" value="Молочный / бежевый / шампань"><i class="p p1"></i><span>Молочный<br>шампань</span></label>
+<label><input type="checkbox" name="Цвет" value="Пыльная роза"><i class="p p2"></i><span>Пыльная<br>роза</span></label>
+<label><input type="checkbox" name="Цвет" value="Природный зелёный"><i class="p p3"></i><span>Природный<br>зелёный</span></label>
+<label><input type="checkbox" name="Цвет" value="Терракотовый / тёплый"><i class="p p4"></i><span>Терракота<br>тёплый</span></label>
+<label><input type="checkbox" name="Цвет" value="Бордовый / винный"><i class="p p5"></i><span>Бордовый<br>винный</span></label>
+<label><input type="checkbox" name="Цвет" value="Голубой / холодный"><i class="p p6"></i><span>Голубой<br>холодный</span></label>
+<label><input type="checkbox" name="Цвет" value="Чёрный / кремовый / золотой"><i class="p p7"></i><span>Чёрный<br>кремовый / золото</span></label>
+<label><input type="checkbox" name="Цвет" value="Яркое современное сочетание"><i class="p p8"></i><span>Яркое<br>современное</span></label>
+</div>
+<label>Свои цвета или референс<textarea name="Свои цвета" placeholder="Можно описать словами. Ссылку/фото можно прислать нам отдельно"></textarea></label>
+<label class="checkline"><input type="checkbox" name="Цвет доверить студии" value="Да"> Не знаю — предложите сами</label>
+</section>
+
+<section><span class="num">04</span><h2>Характер оформления</h2><p class="hint">Вы выбираете не конкретный шрифт, а ощущение.</p>
+<div class="typegrid">
+<label class="t1"><input type="checkbox" name="Типографика" value="Классический / журнальный"><b>Анна & Михаил</b><small>Классический / журнальный</small></label>
+<label class="t2"><input type="checkbox" name="Типографика" value="Романтичный"><b>Анна & Михаил</b><small>Романтичный</small></label>
+<label class="t3"><input type="checkbox" name="Типографика" value="Рукописный акцент"><b>Анна & Михаил</b><small>Рукописный акцент</small></label>
+<label class="t4"><input type="checkbox" name="Типографика" value="Современный минималистичный"><b>АННА & МИХАИЛ</b><small>Современный минималистичный</small></label>
+<label class="t5"><input type="checkbox" name="Типографика" value="Выразительный editorial"><b>Анна<br>& Михаил</b><small>Выразительный editorial</small></label>
+<label class="t6"><input type="checkbox" name="Типографика" value="Контрастный современный"><b>Анна × Михаил</b><small>Контрастный современный</small></label>
+</div></section>
+
+<section><span class="num">05</span><h2>Что должно быть в приглашении?</h2><p class="hint">Выберите нужное. Порядок и композицию мы продумаем сами.</p>
+<div class="chips">
+<label><input type="checkbox" name="Блоки приглашения" value="Обращение к гостям"><span>Обращение к гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Блоки приглашения" value="История пары"><span>История пары</span></label><label><input type="checkbox" name="Блоки приглашения" value="Таймер до свадьбы"><span>Таймер до свадьбы</span></label><label><input type="checkbox" name="Блоки приглашения" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Блоки приглашения" value="Место и карта"><span>Место и карта</span></label><label><input type="checkbox" name="Блоки приглашения" value="Дресс-код"><span>Дресс-код</span></label><label><input type="checkbox" name="Блоки приглашения" value="Пожелания гостям"><span>Пожелания гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Информация о подарках"><span>Информация о подарках</span></label><label><input type="checkbox" name="Блоки приглашения" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Блоки приглашения" value="RSVP — анкета гостей"><span>RSVP — анкета гостей</span></label><label><input type="checkbox" name="Блоки приглашения" value="Индивидуальный раздел"><span>Индивидуальный раздел</span></label>
+</div>
+<label>Что-то ещё?<textarea name="Дополнительные блоки" placeholder="Любая идея, которую хочется увидеть"></textarea></label>
+</section>
+
+<section><span class="num">06</span><h2>Анкета для гостей</h2><p class="hint">Если нужен RSVP, отметьте, что хотите узнать у гостей.</p>
+<div class="chips">
+<label><input type="checkbox" name="Вопросы RSVP" value="Имя"><span>Имя</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Смогут ли присутствовать"><span>Смогут ли присутствовать</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Количество гостей"><span>Количество гостей</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Выбор блюда"><span>Выбор блюда</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Напитки"><span>Напитки</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Комментарий / пожелание"><span>Комментарий / пожелание</span></label>
+</div>
+<label>Какие варианты блюд?<textarea name="Блюда RSVP" placeholder="Если уже знаете"></textarea></label>
+<label>Какие напитки?<textarea name="Напитки RSVP" placeholder="Если уже знаете"></textarea></label>
+<label>Есть ли ещё что-нибудь, что вы хотели бы узнать у гостей?<textarea name="Дополнительные вопросы RSVP"></textarea></label>
+</section>
+
+<section><span class="num">07</span><h2>Материалы</h2><p class="hint">Необязательно иметь всё сейчас — недостающее можно прислать позже.</p>
+<div class="chips">
+<label><input type="checkbox" name="Уже есть материалы" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Уже есть материалы" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Уже есть материалы" value="Готовые тексты"><span>Готовые тексты</span></label><label><input type="checkbox" name="Уже есть материалы" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Уже есть материалы" value="Адрес / геолокация"><span>Адрес / геолокация</span></label><label><input type="checkbox" name="Уже есть материалы" value="Палитра свадьбы"><span>Палитра свадьбы</span></label><label><input type="checkbox" name="Уже есть материалы" value="Референсы"><span>Референсы</span></label>
+</div></section>
+
+<section><span class="num">08</span><h2>А теперь — про вас</h2><p class="hint">Именно здесь часто рождается идея уникального приглашения.</p>
+<label>Есть ли в вашей истории что-то особенное, что хотелось бы отразить?<textarea name="Особенность пары" rows="5" placeholder="Место знакомства, путешествие, общая шутка, увлечение, любимая песня, питомец…"></textarea></label>
+<label>Расскажите всё, что считаете важным, даже если мы об этом не спросили<textarea name="Свободный рассказ" rows="6"></textarea></label>
+</section>
+
+<section class="finish"><span class="num">09</span><h2>Готово</h2><p>Проверьте ответы и отправьте их нам. Мы разберём вашу историю и на её основе будем думать над индивидуальным направлением приглашения.</p>
+<label class="consent"><input type="checkbox" required> Я проверил(а) ответы и готов(а) отправить бриф</label>
+<button type="submit">Отправить бриф</button><p class="status" id="status"></p>
+</section>
+</form></main>
+<footer>ДВОЕ <span>·</span> приглашения, созданные вокруг вашей истории</footer>
+<script src="app.js"></script>
+</body></html>
