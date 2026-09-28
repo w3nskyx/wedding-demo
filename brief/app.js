@@ -39,9 +39,8 @@ function payload(){
 }
 function showSuccess(){
   localStorage.removeItem(STORAGE);
-  document.querySelector('.hero').innerHTML='<div class="mark">ДВОЕ</div><p class="eyebrow">БРИФ ОТПРАВЛЕН</p><h1>Спасибо ♡</h1><p class="lead">Мы получили ваши ответы. Теперь внимательно познакомимся с вашей историей и вернёмся к вам в переписке.</p>';
-  document.querySelector('main').style.display='none';
-  window.scrollTo({top:0,behavior:'smooth'});
+  document.body.innerHTML='<main class="success-page"><div class="success-card"><div class="mark">ДВОЕ</div><div class="success-heart">♡</div><p class="eyebrow">БРИФ УСПЕШНО ОТПРАВЛЕН</p><h1>Спасибо, что выбрали нас</h1><p class="lead">Мы получили ваши ответы и уже можем познакомиться с вашей историей чуть ближе.</p><p class="success-note">Внимательно изучим бриф и скоро вернёмся к вам в переписке Авито.</p><div class="success-sign">До скорого,<br><b>«Двое»</b></div></div></main>';
+  window.scrollTo(0,0);
   history.replaceState(null,'',location.pathname+'?sent=1');
 }
 restoreDraft();
