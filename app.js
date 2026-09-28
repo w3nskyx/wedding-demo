@@ -64,6 +64,7 @@ const note = document.getElementById("formNote");
 function formToObject(form){
   const fd = new FormData(form);
   return {
+    weddingId: CONFIG.weddingId || "musya-matusevich",
     id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
     createdAt: new Date().toISOString(),
     name: fd.get("name"),
