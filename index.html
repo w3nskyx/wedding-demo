@@ -128,12 +128,7 @@
 
         <label>
           <span>Сколько вас будет?</span>
-          <select name="guests">
-            <option value="1">1 человек</option>
-            <option value="2">2 человека</option>
-            <option value="3">3 человека</option>
-            <option value="4">4 человека</option>
-          </select>
+          <input type="number" name="guests" min="1" step="1" inputmode="numeric" required placeholder="Например, 2">
         </label>
 
         <fieldset>
@@ -141,7 +136,6 @@
           <div class="chips">
             <label><input type="checkbox" name="food" value="Мясо"><span>Мясо</span></label>
             <label><input type="checkbox" name="food" value="Рыба"><span>Рыба</span></label>
-            <label><input type="checkbox" name="food" value="Вегетарианское"><span>Без мяса</span></label>
           </div>
         </fieldset>
 

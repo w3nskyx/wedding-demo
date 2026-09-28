@@ -4,5 +4,5 @@ window.WEDDING_CONFIG = {
   rsvpEndpoint: "",
 
   // Если endpoint пустой, ответы сохраняются в localStorage — это удобно для демо.
-  storageKey: "musya_matusevich_rsvp_v01"
+  storageKey: "musya_matusevich_rsvp_v02"
 };
