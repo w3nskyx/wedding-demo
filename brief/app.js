@@ -1,6 +1,6 @@
 const form=document.getElementById('briefForm');
 const status=document.getElementById('status');
-const STORAGE='dvoe_brief_v01_draft';
+const STORAGE='dvoe_brief_v02_draft';
 const ENDPOINT='https://formsubmit.co/ajax/kolenka432@icloud.com';
 
 function controls(){return [...form.querySelectorAll('input[name],textarea[name],select[name]')].filter(el=>!el.name.startsWith('_'));}
@@ -56,7 +56,7 @@ form.addEventListener('submit',async(e)=>{
   saveDraft();
   const btn=form.querySelector('button');
   btn.disabled=true;btn.textContent='Отправляем…';
-  status.textContent='Обычно это занимает несколько секунд. Не закрывайте страницу.';
+  status.textContent='Отправляем бриф… Пожалуйста, не закрывайте страницу.';
   const controller=new AbortController();
   const timer=setTimeout(()=>controller.abort(),25000);
   try{
