@@ -1,6 +1,5 @@
 window.WEDDING_CONFIG = {
   weddingId: "zhulik-zhulik",
-  // Пока визуальный демо-этап: нестандартный RSVP Жуликов не отправляем в живой backend Муси.
-  rsvpEndpoint: "",
+  rsvpEndpoint: "https://wedding-rsvp.72-56-120-150.nip.io/api/rsvp",
   storageKey: "zhulik_zhulik_rsvp_v01"
 };
