@@ -61,12 +61,33 @@ musicButton.addEventListener("click", async () => {
 const form = document.getElementById("rsvpForm");
 const note = document.getElementById("formNote");
 
-function formToObject(form){
+const RSVP_STATE_KEY = `${storageKey}_current`;
+
+function createResponseId() {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  return String(Date.now());
+}
+
+function getSavedState() {
+  try {
+    return JSON.parse(localStorage.getItem(RSVP_STATE_KEY) || "null");
+  } catch {
+    return null;
+  }
+}
+
+function saveState(payload) {
+  localStorage.setItem(RSVP_STATE_KEY, JSON.stringify(payload));
+}
+
+function formToObject(form) {
   const fd = new FormData(form);
+  const previous = getSavedState();
+
   return {
     weddingId: CONFIG.weddingId || "musya-matusevich",
-    id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
-    createdAt: new Date().toISOString(),
+    id: previous?.id || createResponseId(),
+    createdAt: previous?.createdAt || new Date().toISOString(),
     name: fd.get("name"),
     attendance: fd.get("attendance"),
     guests: Number(fd.get("guests") || 1),
@@ -75,33 +96,63 @@ function formToObject(form){
     comment: fd.get("comment") || ""
   };
 }
-function saveLocal(payload){
-  const list = JSON.parse(localStorage.getItem(storageKey) || "[]");
-  list.push(payload);
-  localStorage.setItem(storageKey, JSON.stringify(list));
+
+function restoreForm() {
+  const saved = getSavedState();
+  if (!saved) return;
+
+  const setValue = (name, value) => {
+    const el = form.elements[name];
+    if (el) el.value = value ?? "";
+  };
+
+  setValue("name", saved.name);
+  setValue("guests", saved.guests);
+  setValue("comment", saved.comment);
+
+  form.querySelectorAll('[name="attendance"]').forEach(el => {
+    el.checked = el.value === saved.attendance;
+  });
+
+  form.querySelectorAll('[name="food"]').forEach(el => {
+    el.checked = (saved.food || []).includes(el.value);
+  });
+
+  form.querySelectorAll('[name="drinks"]').forEach(el => {
+    el.checked = (saved.drinks || []).includes(el.value);
+  });
+
+  note.textContent = "Ваш предыдущий ответ восстановлен. Его можно изменить и отправить снова.";
 }
+
+restoreForm();
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const btn = form.querySelector(".submit-button");
   const payload = formToObject(form);
+
   btn.disabled = true;
   btn.textContent = "Отправляем…";
-  try{
-    if(CONFIG.rsvpEndpoint){
-      const res = await fetch(CONFIG.rsvpEndpoint,{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify(payload)
+
+  try {
+    if (CONFIG.rsvpEndpoint) {
+      const res = await fetch(CONFIG.rsvpEndpoint, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
       });
-      if(!res.ok) throw new Error("HTTP " + res.status);
-    } else {
-      saveLocal(payload);
+
+      if (!res.ok) throw new Error("HTTP " + res.status);
     }
-    form.reset();
+
+    saveState(payload);
+
     note.textContent = "Спасибо! Ответ сохранён ♥";
     note.style.fontWeight = "600";
-    note.scrollIntoView({behavior:"smooth",block:"center"});
-  } catch(err){
+    note.scrollIntoView({behavior: "smooth", block: "center"});
+  } catch (err) {
     console.error(err);
     note.textContent = "Не получилось отправить ответ. Попробуйте ещё раз.";
   } finally {
