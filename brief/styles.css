@@ -31,3 +31,19 @@
 .dp5{background:linear-gradient(90deg,#c89da3 0 33%,#7d3f4b 33% 66%,#3f2530 66%)}
 .dp6{background:linear-gradient(90deg,#dbe8ec 0 33%,#9dbbc8 33% 66%,#647d95 66%)}
 .dress-palette span{font-size:12px}
+
+/* v0.3.2 — approved dress-code palette cards */
+.dress-palette{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0 18px}
+.dress-palette label{display:block;position:relative;margin:0;padding:15px 14px 13px;border:1px solid rgba(80,65,50,.16);border-radius:14px;background:rgba(255,255,255,.58);box-shadow:none;cursor:pointer}
+.dress-palette input{position:absolute;left:14px;top:16px;width:20px;height:20px;opacity:1;accent-color:#2d2924}
+.dress-palette label:has(input:checked){outline:2px solid #9f8769;outline-offset:-2px;background:#fff}
+.palette-title{display:block;padding-left:30px;font-family:var(--serif);font-size:18px;line-height:1.2;margin-bottom:13px}
+.palette-circles{display:flex;gap:6px;margin-bottom:10px}
+.palette-circles i{display:block;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:var(--sw);border:1px solid rgba(50,40,30,.10)}
+.dress-palette small{display:block;font-size:12px;line-height:1.35;color:var(--muted)}
+.own-palette{margin-top:4px}
+@media(max-width:520px){
+ .dress-palette{grid-template-columns:1fr}
+ .palette-circles{gap:8px}
+ .palette-circles i{flex-basis:38px;width:38px;height:38px}
+}
