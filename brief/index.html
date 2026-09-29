@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Двое — бриф</title><meta name="description" content="Небольшой бриф для создания персонального свадебного приглашения">
-<link rel="stylesheet" href="styles.css?v=0.3.1">
+<link rel="stylesheet" href="styles.css?v=0.3.2">
 </head>
 <body>
 <header class="hero"><div class="mark">ДВОЕ</div><p class="eyebrow">ПЕРСОНАЛЬНЫЕ СВАДЕБНЫЕ ПРИГЛАШЕНИЯ</p><h1>Расскажите<br>о вашей свадьбе</h1><p class="lead">Здесь нет правильных ответов. Нам важно почувствовать вас, вашу историю и настроение будущего дня.</p><a class="start" href="#brief">Начать бриф ↓</a></header>
@@ -79,7 +79,8 @@
 <label>Ничего не подошло? Опишите ощущение своими словами<textarea name="Свой характер текста" placeholder="Например: очень легко и романтично, но без классики"></textarea></label>
 </section>
 
-<section><span class="num">05</span><h2>Дресс-код</h2><p class="hint">Если планируете дресс-код, расскажите о нём здесь. Это поможет нам связать приглашение с общей атмосферой свадьбы.</p>
+<section><span class="num">05</span><h2>Дресс-код</h2>
+<p class="hint">Если у вас будет дресс-код, это поможет гостям проще подобрать образ и добавит гармонии фотографиям. Расскажите, нужен ли он и какие цвета вам близки.</p>
 <label>Нужен ли дресс-код в приглашении?
 <select name="Дресс-код нужен" id="dressNeed">
 <option value="">Пока не решили</option>
@@ -87,18 +88,18 @@
 <option>Нет</option>
 </select></label>
 <div id="dressDetails" class="conditional-block" hidden>
-<div class="subhead">Какая палитра вам близка?</div>
-<p class="hint">Можно выбрать несколько направлений. Это ориентиры, а не строгий набор цветов для гостей.</p>
+<div class="subhead">Выберите цветовую палитру</div>
+<p class="hint">Можно выбрать несколько вариантов или предложить свою.</p>
 <div class="dress-palette">
-<label><input type="checkbox" name="Палитра дресс-кода" value="Светлая / нейтральная"><i class="dp dp1"></i><span>Светлая<br>нейтральная</span></label>
-<label><input type="checkbox" name="Палитра дресс-кода" value="Пастельная"><i class="dp dp2"></i><span>Пастельная</span></label>
-<label><input type="checkbox" name="Палитра дресс-кода" value="Природная / зелёная"><i class="dp dp3"></i><span>Природная<br>зелёная</span></label>
-<label><input type="checkbox" name="Палитра дресс-кода" value="Тёплая / терракотовая"><i class="dp dp4"></i><span>Тёплая<br>терракотовая</span></label>
-<label><input type="checkbox" name="Палитра дресс-кода" value="Винная / тёмная"><i class="dp dp5"></i><span>Винная<br>тёмная</span></label>
-<label><input type="checkbox" name="Палитра дресс-кода" value="Холодная / голубая"><i class="dp dp6"></i><span>Холодная<br>голубая</span></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Классика"><span class="palette-title">Классика</span><span class="palette-circles"><i style="--sw:#151515"></i><i style="--sw:#555"></i><i style="--sw:#b9afa3"></i><i style="--sw:#ded2bf"></i><i style="--sw:#f6f2ea"></i></span><small>Чёрный, белый, серый, бежевый</small></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Пастельная"><span class="palette-title">Пастельная</span><span class="palette-circles"><i style="--sw:#d4a5a3"></i><i style="--sw:#efc3c0"></i><i style="--sw:#f1cfbc"></i><i style="--sw:#b8c5a9"></i><i style="--sw:#b9cbd4"></i></span><small>Нежные и светлые оттенки</small></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Зелёная"><span class="palette-title">Зелёная</span><span class="palette-circles"><i style="--sw:#19483f"></i><i style="--sw:#72866b"></i><i style="--sw:#9caf95"></i><i style="--sw:#c1cba9"></i><i style="--sw:#ece9d9"></i></span><small>Природные зелёные оттенки</small></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Синяя"><span class="palette-title">Синяя</span><span class="palette-circles"><i style="--sw:#1c3557"></i><i style="--sw:#304f75"></i><i style="--sw:#7f98b4"></i><i style="--sw:#afbed0"></i><i style="--sw:#d9e1e9"></i></span><small>От классического до небесного</small></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Розовая"><span class="palette-title">Розовая</span><span class="palette-circles"><i style="--sw:#7d2438"></i><i style="--sw:#c67d8d"></i><i style="--sw:#e3a9b0"></i><i style="--sw:#efc9c7"></i><i style="--sw:#f5ded8"></i></span><small>От насыщенного до нежного</small></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Тёплая / терракотовая"><span class="palette-title">Тёплая / терракотовая</span><span class="palette-circles"><i style="--sw:#a64d2d"></i><i style="--sw:#c96f4c"></i><i style="--sw:#e8a06e"></i><i style="--sw:#dfc4a4"></i><i style="--sw:#eee2d1"></i></span><small>Тёплые и уютные оттенки</small></label>
 </div>
-<label>Свои цвета<textarea name="Свои цвета дресс-кода" placeholder="Например: оливковый, молочный, шоколадный"></textarea></label>
-<label>Пожелания по дресс-коду<textarea name="Пожелания по дресс-коду" placeholder="Например: свободный стиль в палитре, без строгих ограничений"></textarea></label>
+<label class="own-palette">Своя палитра<textarea name="Свои цвета дресс-кода" placeholder="Укажите свои цвета или опишите сочетание"></textarea></label>
+<label>Дополнительные пожелания<textarea name="Пожелания по дресс-коду" maxlength="500" placeholder="Например: можно добавить немного металлических оттенков, избегать неоновых цветов, предпочтителен более вечерний стиль и т. д."></textarea></label>
 </div>
 </section>
 
@@ -138,5 +139,5 @@
 </section>
 </form></main>
 <footer>ДВОЕ <span>·</span> приглашения, созданные вокруг вашей истории</footer>
-<script src="app.js?v=0.3.1"></script>
+<script src="app.js?v=0.3.2"></script>
 </body></html>
