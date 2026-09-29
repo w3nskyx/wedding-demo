@@ -148,6 +148,17 @@ function showSuccess(){
 
 restoreDraft();
 
+const dressNeed=document.getElementById('dressNeed');
+const dressDetails=document.getElementById('dressDetails');
+
+function updateDressCodeVisibility(){
+  if(!dressNeed||!dressDetails) return;
+  dressDetails.hidden=dressNeed.value!=='Да';
+}
+
+updateDressCodeVisibility();
+dressNeed?.addEventListener('change',updateDressCodeVisibility);
+
 form.addEventListener('input',saveDraft);
 form.addEventListener('change',saveDraft);
 
