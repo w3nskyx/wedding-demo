@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Двое — бриф</title><meta name="description" content="Небольшой бриф для создания персонального свадебного приглашения">
-<link rel="stylesheet" href="styles.css?v=0.3.2">
+<link rel="stylesheet" href="styles.css?v=0.3.3">
 </head>
 <body>
 <header class="hero"><div class="mark">ДВОЕ</div><p class="eyebrow">ПЕРСОНАЛЬНЫЕ СВАДЕБНЫЕ ПРИГЛАШЕНИЯ</p><h1>Расскажите<br>о вашей свадьбе</h1><p class="lead">Здесь нет правильных ответов. Нам важно почувствовать вас, вашу историю и настроение будущего дня.</p><a class="start" href="#brief">Начать бриф ↓</a></header>
@@ -98,7 +98,19 @@
 <label><input type="checkbox" name="Палитра дресс-кода" value="Розовая"><span class="palette-title">Розовая</span><span class="palette-circles"><i style="--sw:#7d2438"></i><i style="--sw:#c67d8d"></i><i style="--sw:#e3a9b0"></i><i style="--sw:#efc9c7"></i><i style="--sw:#f5ded8"></i></span><small>От насыщенного до нежного</small></label>
 <label><input type="checkbox" name="Палитра дресс-кода" value="Тёплая / терракотовая"><span class="palette-title">Тёплая / терракотовая</span><span class="palette-circles"><i style="--sw:#a64d2d"></i><i style="--sw:#c96f4c"></i><i style="--sw:#e8a06e"></i><i style="--sw:#dfc4a4"></i><i style="--sw:#eee2d1"></i></span><small>Тёплые и уютные оттенки</small></label>
 </div>
-<label class="own-palette">Своя палитра<textarea name="Свои цвета дресс-кода" placeholder="Укажите свои цвета или опишите сочетание"></textarea></label>
+<div class="own-palette">
+<div class="subhead">Своя палитра</div>
+<p class="hint">Нажмите на кружок и выберите до пяти своих цветов.</p>
+<div class="custom-color-pickers" id="customColorPickers">
+<label class="color-picker"><input type="color" value="#f2eee7" data-color-index="1"><span class="color-dot"><b>+</b></span></label>
+<label class="color-picker"><input type="color" value="#f2eee7" data-color-index="2"><span class="color-dot"><b>+</b></span></label>
+<label class="color-picker"><input type="color" value="#f2eee7" data-color-index="3"><span class="color-dot"><b>+</b></span></label>
+<label class="color-picker"><input type="color" value="#f2eee7" data-color-index="4"><span class="color-dot"><b>+</b></span></label>
+<label class="color-picker"><input type="color" value="#f2eee7" data-color-index="5"><span class="color-dot"><b>+</b></span></label>
+</div>
+<input type="hidden" name="Своя палитра дресс-кода" id="customPaletteValue" value="">
+<label>Комментарий к своей палитре<textarea name="Комментарий к своей палитре" placeholder="Если хочется — добавьте пояснение к выбранным цветам"></textarea></label>
+</div>
 <label>Дополнительные пожелания<textarea name="Пожелания по дресс-коду" maxlength="500" placeholder="Например: можно добавить немного металлических оттенков, избегать неоновых цветов, предпочтителен более вечерний стиль и т. д."></textarea></label>
 </div>
 </section>
@@ -139,5 +151,5 @@
 </section>
 </form></main>
 <footer>ДВОЕ <span>·</span> приглашения, созданные вокруг вашей истории</footer>
-<script src="app.js?v=0.3.2"></script>
+<script src="app.js?v=0.3.3"></script>
 </body></html>
