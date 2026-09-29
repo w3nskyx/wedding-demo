@@ -47,3 +47,12 @@
  .palette-circles{gap:8px}
  .palette-circles i{flex-basis:38px;width:38px;height:38px}
 }
+
+/* v0.3.3 — custom dress-code color picker */
+.custom-color-pickers{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0 18px}
+.color-picker{position:relative!important;display:block!important;margin:0!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important;width:54px;height:54px;border-radius:50%;cursor:pointer}
+.color-picker input[type="color"]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.color-dot{display:flex;width:54px;height:54px;border-radius:50%;align-items:center;justify-content:center;border:1.5px dashed rgba(70,60,50,.35);background:#fff;box-sizing:border-box;transition:.15s ease}
+.color-dot b{font:300 26px/1 sans-serif;color:var(--muted)}
+.color-picker.is-set .color-dot{border-style:solid;border-color:rgba(50,40,30,.18);box-shadow:0 2px 8px rgba(50,40,30,.08)}
+.color-picker.is-set .color-dot b{display:none}
