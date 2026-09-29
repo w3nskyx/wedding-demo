@@ -157,7 +157,45 @@ function updateDressCodeVisibility(){
 }
 
 updateDressCodeVisibility();
+customColorPickers?.forEach(input=>{
+  if(input.dataset.selected==='true') paintCustomColor(input);
+});
+syncCustomPalette();
+
 dressNeed?.addEventListener('change',updateDressCodeVisibility);
+
+const customPaletteInput=document.getElementById('customPaletteValue');
+const customColorPickers=[...document.querySelectorAll('.color-picker input[type="color"]')];
+
+function syncCustomPalette(){
+  if(!customPaletteInput) return;
+  const selected=customColorPickers
+    .filter(input=>input.dataset.selected==='true')
+    .map(input=>input.value.toUpperCase());
+  customPaletteInput.value=selected.join(', ');
+}
+
+function paintCustomColor(input){
+  const label=input.closest('.color-picker');
+  const dot=label?.querySelector('.color-dot');
+  if(!label||!dot) return;
+  label.classList.add('is-set');
+  dot.style.background=input.value;
+  input.dataset.selected='true';
+}
+
+customColorPickers.forEach(input=>{
+  input.addEventListener('input',()=>{
+    paintCustomColor(input);
+    syncCustomPalette();
+    saveDraft();
+  });
+  input.addEventListener('change',()=>{
+    paintCustomColor(input);
+    syncCustomPalette();
+    saveDraft();
+  });
+});
 
 form.addEventListener('input',saveDraft);
 form.addEventListener('change',saveDraft);
