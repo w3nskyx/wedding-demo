@@ -43,8 +43,7 @@
 <label><input type="checkbox" name="Визуальные мотивы" value="Геометрия"><span>Геометрия</span></label>
 <label><input type="checkbox" name="Визуальные мотивы" value="Без декора / чисто"><span>Без декора / чисто</span></label>
 </div>
-<label>Что именно вам понравилось?<textarea name="Что понравилось в настроении" placeholder="Цвет, свет, лёгкость, строгость, общее ощущение…"></textarea></label>
-<label>Свой вариант / ничего из этого<textarea name="Своё настроение" placeholder="Опишите как чувствуете"></textarea></label>
+<label>Свой вариант / ничего из предложенного<textarea name="Своё настроение" placeholder="Если хочется — опишите настроение своими словами"></textarea></label>
 </section>
 
 <section><span class="num">03</span><h2>Какие оттенки вам нравятся?</h2><p class="hint"><strong>Это не выбор точного цвета будущего приглашения.</strong> Отметьте палитры, атмосфера которых вам близка. Мы используем их как ориентир при создании индивидуального дизайна.</p>
@@ -80,14 +79,41 @@
 <label>Ничего не подошло? Опишите ощущение своими словами<textarea name="Свой характер текста" placeholder="Например: очень легко и романтично, но без классики"></textarea></label>
 </section>
 
-<section><span class="num">05</span><h2>Что должно быть в приглашении?</h2><p class="hint">Выберите нужное. Порядок и композицию мы продумаем сами.</p>
+<section><span class="num">05</span><h2>Дресс-код</h2><p class="hint">Если планируете дресс-код, расскажите о нём здесь. Это поможет нам связать приглашение с общей атмосферой свадьбы.</p>
+<label>Нужен ли дресс-код в приглашении?
+<select name="Дресс-код нужен" id="dressNeed">
+<option value="">Пока не решили</option>
+<option>Да</option>
+<option>Нет</option>
+</select></label>
+<div id="dressDetails" class="conditional-block" hidden>
+<div class="subhead">Какая палитра вам близка?</div>
+<p class="hint">Можно выбрать несколько направлений. Это ориентиры, а не строгий набор цветов для гостей.</p>
+<div class="dress-palette">
+<label><input type="checkbox" name="Палитра дресс-кода" value="Светлая / нейтральная"><i class="dp dp1"></i><span>Светлая<br>нейтральная</span></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Пастельная"><i class="dp dp2"></i><span>Пастельная</span></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Природная / зелёная"><i class="dp dp3"></i><span>Природная<br>зелёная</span></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Тёплая / терракотовая"><i class="dp dp4"></i><span>Тёплая<br>терракотовая</span></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Винная / тёмная"><i class="dp dp5"></i><span>Винная<br>тёмная</span></label>
+<label><input type="checkbox" name="Палитра дресс-кода" value="Холодная / голубая"><i class="dp dp6"></i><span>Холодная<br>голубая</span></label>
+</div>
+<label>Свои цвета<textarea name="Свои цвета дресс-кода" placeholder="Например: оливковый, молочный, шоколадный"></textarea></label>
+<label>Пожелания по дресс-коду<textarea name="Пожелания по дресс-коду" placeholder="Например: свободный стиль в палитре, без строгих ограничений"></textarea></label>
+</div>
+</section>
+
+<section><span class="num">06</span><h2>Подарки</h2><p class="hint">Если хотите деликатно рассказать гостям о пожеланиях по подаркам, напишите это здесь. Мы поможем красиво встроить текст в приглашение.</p>
+<label>Что вы хотели бы сказать гостям о подарках?<textarea name="Пожелания по подаркам" rows="4" placeholder="Например: пожелания по цветам, конвертам, списку подарков — или оставьте поле пустым"></textarea></label>
+</section>
+
+<section><span class="num">07</span><h2>Что должно быть в приглашении?</h2><p class="hint">Выберите нужное. Порядок и композицию мы продумаем сами.</p>
 <div class="chips">
 <label><input type="checkbox" name="Блоки приглашения" value="Обращение к гостям"><span>Обращение к гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Блоки приглашения" value="История пары"><span>История пары</span></label><label><input type="checkbox" name="Блоки приглашения" value="Таймер до свадьбы"><span>Таймер до свадьбы</span></label><label><input type="checkbox" name="Блоки приглашения" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Блоки приглашения" value="Место и карта"><span>Место и карта</span></label><label><input type="checkbox" name="Блоки приглашения" value="Дресс-код"><span>Дресс-код</span></label><label><input type="checkbox" name="Блоки приглашения" value="Пожелания гостям"><span>Пожелания гостям</span></label><label><input type="checkbox" name="Блоки приглашения" value="Информация о подарках"><span>Информация о подарках</span></label><label><input type="checkbox" name="Блоки приглашения" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Блоки приглашения" value="Анкета для гостей"><span>Анкета для гостей</span></label><label><input type="checkbox" name="Блоки приглашения" value="Индивидуальный раздел"><span>Индивидуальный раздел</span></label>
 </div>
 <label>Что-то ещё?<textarea name="Дополнительные блоки" placeholder="Любая идея, которую хочется увидеть"></textarea></label>
 </section>
 
-<section><span class="num">06</span><h2>Анкета для гостей</h2><p class="hint">Если хотите собирать ответы гостей прямо в приглашении, отметьте, что вам важно у них узнать.</p>
+<section><span class="num">08</span><h2>Анкета для гостей</h2><p class="hint">Если хотите собирать ответы гостей прямо в приглашении, отметьте, что вам важно у них узнать.</p>
 <div class="chips">
 <label><input type="checkbox" name="Вопросы RSVP" value="Имя"><span>Имя</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Смогут ли присутствовать"><span>Смогут ли присутствовать</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Количество гостей"><span>Количество гостей</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Выбор блюда"><span>Выбор блюда</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Напитки"><span>Напитки</span></label><label><input type="checkbox" name="Вопросы RSVP" value="Комментарий / пожелание"><span>Комментарий / пожелание</span></label>
 </div>
@@ -96,17 +122,17 @@
 <label>Есть ли ещё что-нибудь, что вы хотели бы узнать у гостей?<textarea name="Дополнительные вопросы RSVP"></textarea></label>
 </section>
 
-<section id="materials"><span class="num">07</span><h2>Что у вас уже готово?</h2><p class="hint">Не страшно, если сейчас есть не всё. Отметьте, какие материалы для приглашения уже готовы. Остальное можно будет прислать позже.</p>
+<section id="materials"><span class="num">09</span><h2>Что у вас уже готово?</h2><p class="hint">Не страшно, если сейчас есть не всё. Отметьте, какие материалы для приглашения уже готовы. Остальное можно будет прислать позже.</p>
 <div class="chips">
 <label><input type="checkbox" name="Уже есть материалы" value="Фотографии"><span>Фотографии</span></label><label><input type="checkbox" name="Уже есть материалы" value="Музыка"><span>Музыка</span></label><label><input type="checkbox" name="Уже есть материалы" value="Тексты или история пары"><span>Тексты / история пары</span></label><label><input type="checkbox" name="Уже есть материалы" value="Программа дня"><span>Программа дня</span></label><label><input type="checkbox" name="Уже есть материалы" value="Адрес / геолокация"><span>Адрес / геолокация</span></label><label><input type="checkbox" name="Уже есть материалы" value="Палитра свадьбы"><span>Палитра свадьбы</span></label><label><input type="checkbox" name="Уже есть материалы" value="Информация о дресс-коде"><span>Информация о дресс-коде</span></label><label><input type="checkbox" name="Уже есть материалы" value="Референсы"><span>Референсы</span></label><label><input type="checkbox" name="Уже есть материалы" value="Другое"><span>Другое</span></label>
 </div></section>
 
-<section><span class="num">08</span><h2>А теперь — про вас</h2><p class="hint">Именно здесь часто рождается идея уникального приглашения.</p>
+<section><span class="num">10</span><h2>А теперь — про вас</h2><p class="hint">Именно здесь часто рождается идея уникального приглашения.</p>
 <label>Есть ли в вашей истории что-то особенное, что хотелось бы отразить?<textarea name="Особенность пары" rows="5" placeholder="Место знакомства, путешествие, общая шутка, увлечение, любимая песня, питомец…"></textarea></label>
 <label>Расскажите всё, что считаете важным, даже если мы об этом не спросили<textarea name="Свободный рассказ" rows="6"></textarea></label>
 </section>
 
-<section class="finish"><span class="num">09</span><h2>Готово</h2><p>Проверьте ответы и отправьте их нам. Мы разберём вашу историю и на её основе будем думать над индивидуальным направлением приглашения.</p>
+<section class="finish"><span class="num">11</span><h2>Готово</h2><p>Проверьте ответы и отправьте их нам. Мы разберём вашу историю и на её основе будем думать над индивидуальным направлением приглашения.</p>
 <label class="consent"><input type="checkbox" required> Я проверил(а) ответы и готов(а) отправить бриф</label>
 <button type="submit">Отправить бриф</button><p class="status" id="status"></p>
 </section>
