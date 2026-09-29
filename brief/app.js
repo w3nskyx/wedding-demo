@@ -5,7 +5,7 @@ const STORAGE='dvoe_brief_v02_draft';
 const SUBMISSION_STORAGE='dvoe_brief_v021_submission_id';
 const CREATED_STORAGE='dvoe_brief_v021_created_at';
 
-const ENDPOINT='https://wedding-rsvp.72-56-120-150.nip.io/api/brief';
+const ENDPOINT = 'https://api.dvoe-wedding.ru/api/brief';
 
 function controls(){
   return [...form.querySelectorAll('input[name],textarea[name],select[name]')]
