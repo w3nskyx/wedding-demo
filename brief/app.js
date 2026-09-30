@@ -150,22 +150,13 @@ restoreDraft();
 
 const dressNeed=document.getElementById('dressNeed');
 const dressDetails=document.getElementById('dressDetails');
+const customPaletteInput=document.getElementById('customPaletteValue');
+const customColorPickers=[...document.querySelectorAll('.color-picker input[type="color"]')];
 
 function updateDressCodeVisibility(){
   if(!dressNeed||!dressDetails) return;
   dressDetails.hidden=dressNeed.value!=='Да';
 }
-
-updateDressCodeVisibility();
-customColorPickers?.forEach(input=>{
-  if(input.dataset.selected==='true') paintCustomColor(input);
-});
-syncCustomPalette();
-
-dressNeed?.addEventListener('change',updateDressCodeVisibility);
-
-const customPaletteInput=document.getElementById('customPaletteValue');
-const customColorPickers=[...document.querySelectorAll('.color-picker input[type="color"]')];
 
 function syncCustomPalette(){
   if(!customPaletteInput) return;
@@ -183,6 +174,25 @@ function paintCustomColor(input){
   dot.style.background=input.value;
   input.dataset.selected='true';
 }
+
+function restoreCustomPalette(){
+  if(!customPaletteInput?.value) return;
+  const colors=customPaletteInput.value
+    .split(',')
+    .map(value=>value.trim())
+    .filter(Boolean)
+    .slice(0,customColorPickers.length);
+
+  colors.forEach((color,index)=>{
+    customColorPickers[index].value=color;
+    paintCustomColor(customColorPickers[index]);
+  });
+}
+
+updateDressCodeVisibility();
+restoreCustomPalette();
+syncCustomPalette();
+dressNeed?.addEventListener('change',updateDressCodeVisibility);
 
 customColorPickers.forEach(input=>{
   input.addEventListener('input',()=>{
