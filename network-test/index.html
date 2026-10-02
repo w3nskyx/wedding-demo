@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#f3eee8">
+  <title>Двое — сетевой тест</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">ДВОЕ · NETWORK TEST</p>
+    <h1>Проверка загрузки через мобильную сеть</h1>
+    <p class="lead">Страница размещена на GitHub Pages, то есть не на текущем сервере Selectel. VPN должен быть выключен.</p>
+
+    <section class="card">
+      <div class="summary">
+        <span id="summaryDot" class="dot pending"></span>
+        <div>
+          <strong id="summaryTitle">Проверяю ресурсы…</strong>
+          <p id="summaryText">Не закрывайте страницу несколько секунд.</p>
+        </div>
+      </div>
+      <button id="rerun" type="button">Запустить ещё раз</button>
+    </section>
+
+    <section class="card">
+      <h2>Результаты</h2>
+      <div id="results" class="results" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h2>Проверка изображений</h2>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <p class="foot">Тестовая страница. Никакие данные не отправляются.</p>
+  </main>
+  <script src="test.js?v=1"></script>
+</body>
+</html>
