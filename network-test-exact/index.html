@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://dvoe-wedding.ru/">
+  <meta name="theme-color" content="#211b18">
+  <meta name="description" content="Двое — студия персональных интерактивных свадебных приглашений.">
+  <title>Двое — персональные свадебные приглашения</title>
+  <link rel="preload" href="assets/font-1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/font-2.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/heart.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="brand-lockup">
+        <img class="wordmark" src="assets/wordmark.svg" width="165" height="102" alt="Двое — студия интерактивных свадебных приглашений">
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <span class="orbit orbit-left"></span>
+        <span class="orbit orbit-right"></span>
+        <span class="orbit-lens"></span>
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title" class="sr-only">Двое — студия интерактивных свадебных приглашений</h1>
+        <p class="hero-text">Вы рассказываете о свадьбе —<br>мы создаём готовое приглашение<br>для ваших гостей.</p>
+      </div>
+
+      <button class="hero-explore" type="button" aria-label="Посмотреть возможности приглашения">
+        <span>Посмотреть возможности</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M7 13l5 5 5-5"/></svg>
+      </button>
+    </section>
+
+    <section class="capabilities" aria-labelledby="capabilities-title">
+      <div class="capabilities-sticky">
+        <div class="capabilities-stage">
+          <div class="capabilities-orbit" aria-hidden="true">
+            <span></span><span></span>
+          </div>
+
+          <header class="capabilities-heading">
+            <p>ВОЗМОЖНОСТИ ПРИГЛАШЕНИЯ</p>
+            <h2 id="capabilities-title">Что может быть<br>внутри приглашения</h2>
+            <span>Состав подбираем под вашу свадьбу — без лишнего.</span>
+          </header>
+
+          <div class="capabilities-grid">
+            <article class="capability-item" data-capability="0">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l3 2M9 3h6M12 3v3"/></svg>
+              </div>
+              <h3>Таймер до свадьбы</h3>
+              <p>Обратный отсчёт до вашего дня.</p>
+            </article>
+
+            <article class="capability-item" data-capability="1">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg>
+              </div>
+              <h3>Карта</h3>
+              <p>Локация и маршрут прямо внутри приглашения.</p>
+            </article>
+
+            <article class="capability-item capability-reply" data-capability="2">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H8l-4 3V5Z"/><path d="m9 11 2 2 4-4"/></svg>
+              </div>
+              <h3>Ответ гостей</h3>
+              <small>RSVP · подтверждение участия</small>
+              <p>Кто придёт, сколько гостей будет и другие важные ответы.</p>
+            </article>
+
+            <article class="capability-item" data-capability="3">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5c0-2 1.2-3 3-3s3 1 3 3c0 1.5-1 2.3-3 3.3L4 14h16L12 8.3"/><path d="M4 14v3h16v-3"/></svg>
+              </div>
+              <h3>Дресс-код</h3>
+              <p>Цвета, настроение и пожелания по образам.</p>
+            </article>
+
+            <article class="capability-item" data-capability="4">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="12" height="14" rx="1.5"/><path d="m8 15 2.5-3 2 2 1.5-1.5 2 2.5"/><path d="M9 5V3h11v14h-4"/></svg>
+              </div>
+              <h3>Ваша история и фотографии</h3>
+              <p>Знакомство пары, важные моменты и галерея.</p>
+            </article>
+
+            <article class="capability-item" data-capability="5">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v11H9l-4 4V5Z"/><path d="M9 9h6M9 12h4"/></svg>
+              </div>
+              <h3>Пожелания гостям</h3>
+              <p>Про цветы, подарки, детей, трансфер и детали дня.</p>
+            </article>
+
+            <article class="capability-item" data-capability="6">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v6c0 2 1 3 3 3V4M11 4v6c0 2-1 3-3 3v7"/><path d="M17 4v16M17 4c3 2 3 7 0 9"/></svg>
+              </div>
+              <h3>Выбор блюд и напитков</h3>
+              <p>Можно заранее собрать предпочтения гостей.</p>
+            </article>
+
+            <article class="capability-item" data-capability="7">
+              <div class="capability-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12M9 9l10-2"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+              </div>
+              <h3>Ваша музыка</h3>
+              <p>Музыка вашей свадьбы прямо внутри приглашения.</p>
+            </article>
+
+            <article class="capability-final" data-capability-final>
+              <div class="capability-final-mark" aria-hidden="true"><span></span><span></span></div>
+              <div>
+                <p>ТОЛЬКО НУЖНОЕ</p>
+                <h3>Состав сайта —<br>под вашу свадьбу.</h3>
+                <span>Добавим нужные разделы и не будем перегружать приглашение лишними блоками.</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="capabilities-progress" aria-hidden="true">
+            <span class="capabilities-count"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <span class="capabilities-line"><i></i></span>
+            <span class="capabilities-label">Таймер</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="worlds" aria-labelledby="worlds-title">
+      <div class="worlds-sticky">
+        <div class="worlds-stage" data-design-stage="0">
+          <header class="worlds-heading">
+            <p>ИНДИВИДУАЛЬНЫЙ ДИЗАЙН</p>
+            <h2 id="worlds-title">Одинаковых свадеб<br>не бывает.</h2>
+            <span>Не выбираем стиль из каталога — собираем визуальный язык вокруг вашей свадьбы.</span>
+          </header>
+
+          <div class="design-board" aria-label="Как складывается визуальный стиль приглашения">
+            <article class="design-piece design-photo">
+              <div class="design-photo-stack" aria-hidden="true">
+                <div class="photo-sheet photo-sheet-a">
+                  <img src="assets/world-botanical-640.webp" alt="">
+                  <span class="photo-sheet-tag">ОБЛОЖКА</span>
+                  <strong>наш день</strong>
+                  <small>21 · 06 · 2027</small>
+                </div>
+                <div class="photo-sheet photo-sheet-b">
+                  <img src="assets/world-dark-640.webp" alt="">
+                  <span class="photo-sheet-tag">ВЕЧЕР</span>
+                  <strong>ближе<br>к вам</strong>
+                  <small>свечи · музыка · город</small>
+                </div>
+                <div class="photo-sheet photo-sheet-c">
+                  <img src="assets/world-airy-640.webp" alt="">
+                  <span class="photo-sheet-tag">ИСТОРИЯ</span>
+                  <strong>важные<br>моменты</strong>
+                  <small>фотографии и детали</small>
+                </div>
+                <div class="photo-sheet photo-sheet-d">
+                  <img src="assets/world-botanical-640.webp" alt="">
+                  <span class="photo-sheet-tag">ГАЛЕРЕЯ</span>
+                  <strong>ваши<br>кадры</strong>
+                  <small>в своём ритме</small>
+                </div>
+              </div>
+              <span class="design-piece-label">ФОТОГРАФИЯ</span>
+            </article>
+
+            <article class="design-piece design-type">
+              <span class="design-piece-label">ТИПОГРАФИКА</span>
+              <div class="type-sample">
+                <small>приглашение</small>
+                <strong>Наш<br>день</strong>
+                <em>двадцать первое июня</em>
+              </div>
+            </article>
+
+            <article class="design-piece design-palette">
+              <span class="design-piece-label">ЦВЕТ</span>
+              <div class="palette-swatches" aria-hidden="true">
+                <span style="--tone:#ead8c7"></span>
+                <span style="--tone:#b9785f"></span>
+                <span style="--tone:#6f7864"></span>
+                <span style="--tone:#30211c"></span>
+              </div>
+              <p>Тон задаёт<br>настроение.</p>
+            </article>
+
+            <article class="design-piece design-layout">
+              <span class="design-piece-label">КОМПОЗИЦИЯ</span>
+              <div class="layout-sketch" aria-hidden="true">
+                <span class="layout-circle layout-circle-a"></span>
+                <span class="layout-circle layout-circle-b"></span>
+                <span class="layout-rule"></span>
+                <span class="layout-word">двое</span>
+              </div>
+            </article>
+
+            <div class="design-result">
+              <div class="design-result-mark" aria-hidden="true"><span></span><span></span></div>
+              <p>НЕ ШАБЛОН</p>
+              <strong>Стиль рождается<br>вокруг вашей свадьбы.</strong>
+              <span>Цвет, шрифт, фотографии и композиция работают как одна система.</span>
+            </div>
+          </div>
+
+          <div class="worlds-note" aria-live="polite">
+            <span class="worlds-note-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <div>
+              <small class="worlds-note-kicker">ЦВЕТ</small>
+              <strong class="worlds-note-title">Сначала — настроение.</strong>
+              <p class="worlds-note-copy">Подбираем палитру, которая подходит именно вашему дню.</p>
+            </div>
+          </div>
+
+          <div class="worlds-footer" aria-hidden="true">
+            <span class="world-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <span class="world-line"><i></i></span>
+            <span class="world-label">Цвет</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" aria-labelledby="process-title">
+      <div class="process-sticky">
+        <div class="process-stage">
+          <div class="process-orbit" aria-hidden="true">
+            <span></span><span></span>
+          </div>
+
+          <header class="process-heading">
+            <p>КАК ПРОХОДИТ РАБОТА</p>
+            <h2 id="process-title">От первого сообщения<br>до готовой ссылки.</h2>
+            <span>Четыре понятных шага — без конструктора и лишней рутины.</span>
+          </header>
+
+          <div class="process-track">
+            <article class="process-step" data-step="0">
+              <div class="process-node">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg>
+              </div>
+              <div class="process-copy">
+                <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                <h3>Рассказываете<br>о свадьбе</h3>
+                <p>Знакомимся с датой, местом, настроением и тем, что для вас важно.</p>
+              </div>
+            </article>
+
+            <article class="process-step" data-step="1">
+              <div class="process-node">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 10-10 3 3L7 20H4v-3Z"/><path d="m13 8 3 3M17 4l3 3"/></svg>
+              </div>
+              <div class="process-copy">
+                <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                <h3>Мы создаём</h3>
+                <p>Продумываем визуальное направление и собираем приглашение вокруг вашей свадьбы.</p>
+              </div>
+            </article>
+
+            <article class="process-step" data-step="2">
+              <div class="process-node">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+              </div>
+              <div class="process-copy">
+                <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                <h3>Вы смотрите</h3>
+                <p>Показываем готовый вариант, обсуждаем впечатление и вносим нужные правки.</p>
+              </div>
+            </article>
+
+            <article class="process-step" data-step="3">
+              <div class="process-node">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 7l5 5-5 5"/><path d="M5 5h5M5 19h5"/></svg>
+              </div>
+              <div class="process-copy">
+                <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                <h3>Отправляете<br>гостям</h3>
+                <p>Получаете готовую ссылку и делитесь ею там, где удобно вашим гостям.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="process-footer" aria-hidden="true">
+            <span class="process-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <span class="process-line"><i></i></span>
+            <span class="process-label">Рассказываете</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paths" aria-labelledby="paths-title">
+      <div class="paths-sticky">
+        <div class="paths-stage">
+          <header class="paths-heading">
+            <p>ДВА ПУТИ СОЗДАНИЯ</p>
+            <h2 id="paths-title">По-разному начинаем.<br>К одному приходим.</h2>
+            <span>Вам не нужно собирать сайт самостоятельно.</span>
+          </header>
+
+          <article class="path-card path-individual" data-path="0">
+            <p class="path-status">ДОСТУПНО СЕЙЧАС</p>
+            <span class="path-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <h3>Индивидуальный<br>дизайн</h3>
+            <p>Начинаем с вашей свадьбы, истории, пожеланий и материалов — и создаём новую визуальную концепцию с нуля.</p>
+          </article>
+
+          <article class="path-card path-concept" data-path="1">
+            <p class="path-status">ТЕСТИРУЕМ</p>
+            <span class="path-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <h3>Авторские<br>направления</h3>
+            <p>Берём законченное авторское направление студии и профессионально адаптируем его под вашу свадьбу.</p>
+            <small>Это не конструктор и не набор дизайн-настроек.</small>
+          </article>
+
+          <div class="paths-result">
+            <div class="paths-result-mark" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <p>В обоих случаях вы получаете</p>
+            <strong>готовое персональное<br>приглашение.</strong>
+          </div>
+
+          <div class="paths-footer" aria-hidden="true">
+            <span class="paths-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <span class="paths-line"><i></i></span>
+            <span class="paths-label">Индивидуальный</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guests" aria-labelledby="guests-title">
+      <div class="guests-sticky">
+        <div class="guests-stage">
+          <div class="guests-orbit" aria-hidden="true"><span></span><span></span></div>
+
+          <header class="guests-heading">
+            <p>СЦЕНАРИЙ ГОСТЯ</p>
+            <h2 id="guests-title">Гостям тоже<br>просто.</h2>
+            <span>Одна ссылка — полноценное приглашение уже внутри.</span>
+          </header>
+
+          <div class="guest-phone" aria-label="Пример приглашения глазами гостя">
+            <div class="guest-phone-top" aria-hidden="true">
+              <span class="guest-phone-time">09:41</span>
+              <span class="guest-phone-island"></span>
+              <svg viewBox="0 0 24 24"><path d="M4 17h2M8 14h2v3H8zM12 11h2v6h-2zM16 8h2v9h-2z"/><path d="M20 7c1.3 1.4 2 3.1 2 5s-.7 3.6-2 5M3 9c2.8-2.6 6.4-4 10-4"/></svg>
+            </div>
+
+            <div class="guest-phone-viewport">
+              <div class="guest-invite-page">
+                <section class="invite-cover">
+                  <img src="assets/world-botanical-640.webp" alt="">
+                  <div class="invite-cover-shade"></div>
+                  <div class="invite-cover-copy">
+                    <small>ПРИГЛАШЕНИЕ НА СВАДЬБУ</small>
+                    <strong>Анна<br>& Михаил</strong>
+                    <span>21 · 06 · 2027</span>
+                  </div>
+                  <div class="invite-cover-down" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 5v13M7 13l5 5 5-5"/></svg>
+                  </div>
+                </section>
+
+                <section class="invite-story">
+                  <small>НАША ИСТОРИЯ</small>
+                  <h3>Всё началось<br>с одного вечера.</h3>
+                  <p>Сначала долгий разговор, потом первая совместная поездка — и однажды стало понятно: дальше только вместе.</p>
+                  <div class="invite-story-line" aria-hidden="true"><span></span><i></i><span></span></div>
+                  <p class="invite-story-note">Теперь хотим разделить этот день с самыми близкими.</p>
+                </section>
+
+                <section class="invite-gallery">
+                  <small>НАШИ МОМЕНТЫ</small>
+                  <div class="invite-gallery-grid">
+                    <figure><img src="assets/world-airy-640.webp" alt=""></figure>
+                    <figure><img src="assets/world-dark-640.webp" alt=""></figure>
+                    <figure><img src="assets/world-botanical-640.webp" alt=""></figure>
+                  </div>
+                  <span>Немного нас — до самого важного дня.</span>
+                </section>
+
+                <section class="invite-countdown">
+                  <small>ДО СВАДЬБЫ</small>
+                  <h3>Осталось совсем<br>немного.</h3>
+                  <div class="invite-timer" aria-label="42 дня 7 часов 18 минут">
+                    <div><strong>42</strong><span>дня</span></div>
+                    <div><strong>07</strong><span>часов</span></div>
+                    <div><strong>18</strong><span>минут</span></div>
+                  </div>
+                </section>
+
+                <section class="invite-location">
+                  <small>МЕСТО</small>
+                  <h3>Будем ждать<br>вас здесь.</h3>
+                  <div class="invite-map" aria-hidden="true">
+                    <svg viewBox="0 0 260 170" preserveAspectRatio="none">
+                      <path class="map-road main" d="M-10 132C38 96 68 116 106 74S181 25 270 54"/>
+                      <path class="map-road" d="M28 -10C54 36 47 79 82 105s76 15 112 76"/>
+                      <path class="map-road thin" d="M-10 45C38 54 70 31 106 39s62 39 164 29"/>
+                      <path class="map-road thin" d="M126 -10c-7 53 15 79 46 95s52 35 61 95"/>
+                      <circle cx="149" cy="76" r="5"/>
+                      <path class="map-pin" d="M149 42c-13 0-23 10-23 23 0 18 23 40 23 40s23-22 23-40c0-13-10-23-23-23Zm0 31a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z"/>
+                    </svg>
+                  </div>
+                  <strong class="invite-place">Усадьба «Берег»</strong>
+                  <p>Ленинградская область<br>Сбор гостей в 16:00</p>
+                  <span class="invite-route">Построить маршрут</span>
+                </section>
+
+                <section class="invite-rsvp">
+                  <small>ОТВЕТ ГОСТЕЙ</small>
+                  <h3>Будете с нами?</h3>
+                  <p>Ответьте на несколько вопросов — это поможет нам всё подготовить.</p>
+                  <div class="invite-rsvp-choice">
+                    <span class="active">Да, с радостью</span><span>Не смогу</span>
+                  </div>
+                  <label><span>Количество гостей</span><b>2</b></label>
+                  <div class="invite-rsvp-food"><span>Мясо</span><span>Рыба</span></div>
+                  <span class="invite-rsvp-submit">Подтвердить участие</span>
+                </section>
+
+                <section class="invite-thanks">
+                  <div class="invite-thanks-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg>
+                  </div>
+                  <small>ОТВЕТ СОХРАНЁН</small>
+                  <h3>До встречи<br>на свадьбе.</h3>
+                  <p>Если планы изменятся, ответ можно обновить позже.</p>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="guests-caption" aria-live="polite">
+            <span class="guests-caption-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <div>
+              <small class="guests-caption-kicker">ПРИГЛАШЕНИЕ ЦЕЛИКОМ</small>
+              <strong class="guests-caption-title">Всё приглашение — в одной ссылке.</strong>
+              <p class="guests-caption-copy">Гость листает его как обычную страницу: от обложки до ответа.</p>
+            </div>
+          </div>
+
+          <div class="guests-result">
+            <p>Красиво для вас.</p>
+            <strong>Понятно для гостей.</strong>
+          </div>
+
+          <div class="guests-footer" aria-hidden="true">
+            <span class="guests-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <span class="guests-line"><i></i></span>
+            <span class="guests-label">Обложка</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assurance" aria-labelledby="assurance-title">
+      <div class="assurance-sticky">
+        <div class="assurance-stage">
+          <div class="assurance-orbit" aria-hidden="true"><span></span><span></span></div>
+
+          <header class="assurance-heading">
+            <p>СПОКОЙНО ДО ГОТОВОЙ ССЫЛКИ</p>
+            <h2 id="assurance-title">Вы всё увидите<br>до гостей.</h2>
+            <span>Сначала приглашение смотрите вы. Потом — только согласованная версия.</span>
+          </header>
+
+          <div class="assurance-sheet">
+            <div class="assurance-sheet-head">
+              <div class="assurance-mark" aria-hidden="true"><span></span><span></span></div>
+              <div>
+                <small>ВАШЕ ПРИГЛАШЕНИЕ</small>
+                <strong>Перед отправкой гостям</strong>
+              </div>
+            </div>
+
+            <div class="assurance-list">
+              <article class="assurance-step" data-assurance="0">
+                <span class="assurance-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg>
+                </span>
+                <div>
+                  <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                  <h3>Сначала смотрите вы</h3>
+                  <p>Показываем приглашение до того, как его увидят гости.</p>
+                </div>
+              </article>
+
+              <article class="assurance-step" data-assurance="1">
+                <span class="assurance-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg>
+                </span>
+                <div>
+                  <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                  <h3>Правки — после просмотра</h3>
+                  <p>Обсуждаем впечатление и вносим согласованные изменения.</p>
+                </div>
+              </article>
+
+              <article class="assurance-step" data-assurance="2">
+                <span class="assurance-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg>
+                </span>
+                <div>
+                  <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                  <h3>Ваши материалы</h3>
+                  <p>Работаем с переданными и утверждёнными фото, текстами и деталями.</p>
+                </div>
+              </article>
+
+              <article class="assurance-step" data-assurance="3">
+                <span class="assurance-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg>
+                </span>
+                <div>
+                  <small class="brand-marker"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></small>
+                  <h3>Финальная проверка</h3>
+                  <p>После неё вы получаете готовую ссылку для гостей.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="assurance-seal">
+              <small>ГОТОВО К ОТПРАВКЕ</small>
+              <strong>Сначала — ваше «да».</strong>
+              <span>Потом — приглашение гостям.</span>
+            </div>
+          </div>
+
+          <div class="assurance-footer" aria-hidden="true">
+            <span class="assurance-number"><img class="brand-heart" src="assets/heart.svg" alt="" aria-hidden="true"></span>
+            <span class="assurance-line"><i></i></span>
+            <span class="assurance-label">Смотрите вы</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="faq-stage">
+        <div class="faq-orbit" aria-hidden="true"><span></span><span></span></div>
+
+        <header class="faq-heading">
+          <p>ЧАСТЫЕ ВОПРОСЫ</p>
+          <h2 id="faq-title">Перед тем как<br>рассказать о свадьбе.</h2>
+          <span>Коротко о том, что обычно хочется понять заранее.</span>
+        </header>
+
+        <div class="faq-list">
+          <article class="faq-item is-open">
+            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+              <span>Это конструктор, где нам нужно всё собирать самим?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1">
+              <div><p>Нет. Вы рассказываете о свадьбе и передаёте материалы, а мы создаём готовое приглашение. Вам не нужно разбираться в дизайне или собирать сайт из блоков.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>Что может быть внутри приглашения?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2">
+              <div><p>История пары, фотографии, музыка, таймер, программа дня, карта, дресс-код, пожелания гостям, выбор блюд и напитков, ответы гостей и другие нужные именно вашей свадьбе разделы.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>Все приглашения выглядят одинаково?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3">
+              <div><p>Нет. В индивидуальном дизайне визуальное направление создаётся вокруг конкретной пары, её свадьбы, фотографий и настроения — а не выбирается из одного шаблона.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>Что нужно от нас для начала?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4">
+              <div><p>Для старта достаточно рассказать о дате, месте, настроении свадьбы и ваших пожеланиях. Фотографии, тексты, музыка и остальные детали можно собирать уже в процессе.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>Можно ли внести правки?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5">
+              <div><p>Да. Сначала приглашение смотрите вы, затем обсуждаем впечатление и вносим согласованные изменения. Гостям отправляется уже финальная версия.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+              <span>Как гости получают приглашение и отвечают?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-6">
+              <div><p>Вы отправляете гостям обычную ссылку. Они открывают приглашение в браузере, смотрят всю информацию и там же подтверждают участие. Если планы изменятся, ответ можно обновить позже.</p></div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7">
+              <span>Можно использовать свои фотографии и музыку?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-7">
+              <div><p>Да. Именно ваши материалы помогают сделать приглашение личным. Мы вписываем фотографии, тексты, музыку и другие детали в общую визуальную концепцию свадьбы.</p></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="faq-note">
+          <div class="faq-note-mark" aria-hidden="true"><span></span><span></span></div>
+          <div>
+            <p>Не нашли свой вопрос?</p>
+            <strong>Расскажите о нём вместе со свадьбой.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-cta-title">
+      <div class="final-cta-orbit" aria-hidden="true">
+        <span class="final-cta-circle final-cta-circle-left"></span>
+        <span class="final-cta-circle final-cta-circle-right"></span>
+        <span class="final-cta-lens"></span>
+      </div>
+
+      <div class="final-cta-heart" aria-hidden="true">
+        <img src="assets/heart.svg" alt="">
+      </div>
+
+      <div class="final-cta-copy">
+        <p>НАЧНЁМ С ВАС</p>
+        <h2 id="final-cta-title">Расскажите<br>о вашей свадьбе.</h2>
+        <span>Не нужно заранее знать, каким должно быть приглашение. Начнём с вашей истории, планов и деталей дня.</span>
+
+        <a class="final-cta-button" href="https://w3nskyx.github.io/wedding-demo/brief/">
+          <span>Рассказать о свадьбе</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 7l5 5-5 5"/></svg>
+        </a>
+      </div>
+
+      <div class="final-cta-brand">
+        <img src="assets/wordmark.svg" alt="Двое">
+        <span>Студия интерактивных свадебных приглашений</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="contact-widget" aria-label="Связаться со студией">
+    <div class="contact-menu" id="contact-menu" aria-hidden="true">
+      <a class="contact-option contact-telegram" href="https://t.me/dvoe_wedding_invite" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram студии «Двое»">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 11.4 16.4-6.5-3 14.2-5.2-4.1-3.1 2.9.7-5 8.1-5.2-10 4.2Z"/></svg>
+        <span>Telegram</span>
+      </a>
+      <a class="contact-option contact-instagram" href="https://www.instagram.com/dvoe.wedding.invite/" target="_blank" rel="noopener noreferrer" aria-label="Открыть Instagram студии «Двое»">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.7" r="1"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a class="contact-option contact-vk" href="https://vk.ru/club241924061" target="_blank" rel="noopener noreferrer" aria-label="Открыть ВКонтакте студии «Двое»">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 6.7h3.2c.2 2.7 1.4 5.2 3.4 6.9V6.7h3v4c1.8-1.4 3.2-3 4.2-4h3.3c-1.1 2.2-2.5 4-4.1 5.5 1.7 1.2 3.2 2.8 4.4 5h-3.5c-1.2-1.5-2.5-2.7-4.3-3.6v3.6h-.9c-5.1 0-8.2-3.6-8.7-10.5Z"/></svg>
+        <span>ВКонтакте</span>
+      </a>
+      <a class="contact-option contact-max" href="https://max.ru/u/f9LHodD0cOJY8ND9RNSPYLNRLluktD8o6N8ggqO1EcmsvOCHzRhqzK_0FyQ" target="_blank" rel="noopener noreferrer" aria-label="Открыть MAX студии «Двое»">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17V7l7 6 7-6v10M5 7l7 10 7-10"/></svg>
+        <span>MAX</span>
+      </a>
+      <button class="contact-option contact-callback" type="button" aria-controls="callback-card" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.1 3.7 10 7.9 8.2 10c1.4 2.8 3.4 4.8 6.2 6.2l2.1-1.8 4.2 2.9c.4.3.6.8.4 1.3-.6 1.7-2.2 2.8-4 2.7C9.6 20.7 3.3 14.4 2.7 6.9c-.1-1.8 1-3.4 2.7-4 .5-.2 1 .1 1.3.8Z"/></svg>
+        <span>Оставить номер</span>
+      </button>
+    </div>
+
+    <div class="callback-card" id="callback-card" aria-hidden="true">
+      <button class="callback-close" type="button" aria-label="Закрыть форму">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+
+      <form class="callback-form" novalidate>
+        <p class="callback-kicker">ОБРАТНЫЙ ЗВОНОК</p>
+        <h2>Хотите, мы<br>свяжемся с вами?</h2>
+        <p class="callback-copy">Оставьте номер — расскажем о приглашениях и ответим на вопросы.</p>
+
+        <label class="callback-field">
+          <span>Ваше имя <i>необязательно</i></span>
+          <input name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+        </label>
+
+        <label class="callback-field">
+          <span>Телефон</span>
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 999 000-00-00" required>
+          <small class="callback-error" aria-live="polite"></small>
+        </label>
+
+        <button class="callback-submit" type="submit">Перезвоните мне</button>
+      </form>
+
+      <div class="callback-success" role="status" aria-hidden="true">
+        <div class="callback-success-heart"><img src="assets/heart.svg" alt="" aria-hidden="true"></div>
+        <p>СПАСИБО</p>
+        <h2>Мы получили<br>ваш номер.</h2>
+        <span>Свяжемся с вами и всё спокойно обсудим.</span>
+        <button type="button" class="callback-done">Хорошо</button>
+      </div>
+    </div>
+
+    <button class="contact-toggle" type="button" aria-expanded="false" aria-controls="contact-menu">
+      <span class="contact-toggle-text">Связаться с нами</span>
+      <img class="contact-toggle-heart" src="assets/heart.svg" alt="" aria-hidden="true">
+    </button>
+  </div>
+
+  <script src="hero.js"></script>
+  <script src="capabilities.js"></script>
+  <script src="worlds.js"></script>
+  <script src="process.js"></script>
+  <script src="paths.js"></script>
+  <script src="guests.js"></script>
+  <script src="assurance.js"></script>
+  <script src="faq.js"></script>
+</body>
+</html>
